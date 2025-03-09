@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Real Search Engine</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        #searchBox { width: 100%; padding: 10px; margin-bottom: 10px; }
+        .result { padding: 10px; border-bottom: 1px solid #ddd; }
+        .result a { text-decoration: none; color: blue; }
+    </style>
+</head>
+<body>
+    <h2>Real Search Engine</h2>
+    <input type="text" id="searchBox" placeholder="Search here..." onkeyup="searchQuery()">
+    <div id="results"></div>
+
+    <script>
+        async function searchQuery() {
+            let query = document.getElementById("searchBox").value.trim();
+            let resultsDiv = document.getElementById("results");
+            resultsDiv.innerHTML = "";
+
+            if (query.length < 2) return; // Prevent too many API requests
+
+            let apiUrl = `https://api.duckduckgo.com/?q=${query}&format=json&pretty=1`;
+
+            try {
+                let response = await fetch(apiUrl);
+                let data = await response.json();
+
+                if (data.RelatedTopics.length > 0) {
+                    data.RelatedTopics.forEach(topic => {
+                        if (topic.Text) {
+                            let div = document.createElement("div");
+                            div.classList.add("result");
+                            div.innerHTML = `<a href="${topic.FirstURL}" target="_blank">${topic.Text}</a>`;
+                            resultsDiv.appendChild(div);
+                        }
+                    });
+                } else {
+                    resultsDiv.innerHTML = "<p>No results found</p>";
+                }
+            } catch (error) {
+                console.error("Error fetching search results:", error);
+                resultsDiv.innerHTML = "<p>Failed to fetch results.</p>";
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>GMvault - Agricultural Genetic Modification Database</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+        }
+        h1, h2, h3 {
+            font-family: 'Merriweather', serif;
+        }
+        .hero {
+            background-image: url('https://images.unsplash.com/photo-1586773860418-d37222d8fce3?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80');
+            background-size: cover;
+            background-position: center;
+            
+        }
+        .feature-card:hover {
+            transform: translateY(-10px);
+            transition: transform 0.3s ease;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+    <!-- Header -->
+    <header class="bg-white shadow-md">
+        <div class="container mx-auto px-4 flex justify-between items-center py-4">
+            <div class="logo flex items-center space-x-4">
+                <img src="./images/gmvault-logo.png" alt="GMvault Logo" class="h-12">
+                <div>
+                    <h1 class="text-2xl font-bold text-green-800">GMvault</h1>
+                    <p class="text-sm text-green-600">Agricultural Genetic Modification Database</p>
+                </div>
+            </div>
+            <nav>
+                <ul class="flex space-x-6">
+                    <li><a href="#home" class="text-green-800 hover:text-green-600 font-semibold">Home</a></li>
+                    <li><a href="#traits" class="text-green-800 hover:text-green-600 font-semibold">Traits</a></li>
+                    <li><a href="#gm-data" class="text-green-800 hover:text-green-600 font-semibold">GM Data</a></li>
+                    <li><a href="#resources" class="text-green-800 hover:text-green-600 font-semibold">Resources</a></li>
+                    <li><a href="#about" class="text-green-800 hover:text-green-600 font-semibold">About</a></li>
+                    <li><a href="#contact" class="text-green-800 hover:text-green-600 font-semibold">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero py-32">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-5xl font-bold text-white mb-4">Revolutionizing Agriculture with Genetic Modification</h2>
+            <p class="text-xl text-green-100 mb-8">Explore the future of farming with GMvault. Discover data, insights, and innovations in genetically modified crops.</p>
+            <div class="flex justify-center space-x-4">
+                <input type="text" placeholder="Search GM crops, traits..." class="w-1/3 px-4 py-2 rounded-lg bg-white bg-opacity-80 text-green-800 placeholder-green-600 focus:outline-none focus:ring-2 focus:ring-green-500">
+                <button class="px-6 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700 transition duration-300">Search</button>
+            </div>
+            <a href="#gm-data" class="mt-6 inline-block px-8 py-3 bg-green-700 text-white rounded-lg hover:bg-green-800 transition duration-300">Explore Data</a>
+        </div>
+    </section>
+
+    <!-- Quick Links Section -->
+    <section class="quick-links bg-green-50 py-12">
+        <div class="container mx-auto px-4 text-center">
+            <h3 class="text-3xl font-bold text-green-800 mb-8">Quick Links</h3>
+            <div class="flex justify-center space-x-8">
+                <a href="#popular-traits" class="px-6 py-3 bg-green-600 text-white rounded-lg hover:bg-green-700 transition duration-300">Popular Traits</a>
+                <a href="#recent-additions" class="px-6 py-3 bg-green-600 text-white rounded-lg hover:bg-green-700 transition duration-300">Recent Additions</a>
+                <a href="#crop-types" class="px-6 py-3 bg-green-600 text-white rounded-lg hover:bg-green-700 transition duration-300">Crop Types</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="bg-white py-16">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl font-bold text-green-800 text-center mb-12">Core Functionalities</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="feature-card bg-green-50 p-6 rounded-lg text-center shadow-lg hover:shadow-xl transition duration-300">
+                    <i class="fas fa-search text-4xl text-green-600 mb-4"></i>
+                    <h3 class="text-xl font-bold text-green-800 mb-2">Advanced Search</h3>
+                    <p class="text-green-700">Find detailed information on GM crops with our powerful search tools.</p>
+                </div>
+                <div class="feature-card bg-green-50 p-6 rounded-lg text-center shadow-lg hover:shadow-xl transition duration-300">
+                    <i class="fas fa-chart-line text-4xl text-green-600 mb-4"></i>
+                    <h3 class="text-xl font-bold text-green-800 mb-2">Real-Time Insights</h3>
+                    <p class="text-green-700">Access up-to-date analytics and trends in GM crop research.</p>
+                </div>
+                <div class="feature-card bg-green-50 p-6 rounded-lg text-center shadow-lg hover:shadow-xl transition duration-300">
+                    <i class="fas fa-database text-4xl text-green-600 mb-4"></i>
+                    <h3 class="text-xl font-bold text-green-800 mb-2">Comprehensive Data</h3>
+                    <p class="text-green-700">Explore a vast repository of GM crop data and genetic information.</p>
+                </div>
+                <div class="feature-card bg-green-50 p-6 rounded-lg text-center shadow-lg hover:shadow-xl transition duration-300">
+                    <i class="fas fa-globe text-4xl text-green-600 mb-4"></i>
+                    <h3 class="text-xl font-bold text-green-800 mb-2">GM Crop Explorer</h3>
+                    <p class="text-green-700">Explore GM crops on an interactive world map.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Educational Resources Section -->
+    <section id="resources" class="bg-green-50 py-12">
+        <div class="container mx-auto px-4 text-center">
+            <h3 class="text-3xl font-bold text-green-800 mb-4">Educational Resources</h3>
+            <p class="text-lg text-green-700">Tutorials, FAQs, and guides explaining GM technology for non-experts.</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-green-800 py-8">
+        <div class="container mx-auto px-4 text-center">
+            <div class="footer-links mb-4">
+                <a href="#privacy" class="text-green-200 hover:text-green-400 mx-4">Privacy Policy</a>
+                <a href="#terms" class="text-green-200 hover:text-green-400 mx-4">Terms of Service</a>
+            </div>
+            <div class="social-icons mb-4">
+                <a href="#" class="text-green-200 hover:text-green-400 mx-2"><i class="fab fa-twitter text-2xl"></i></a>
+                <a href="#" class="text-green-200 hover:text-green-400 mx-2"><i class="fab fa-linkedin text-2xl"></i></a>
+                <a href="#" class="text-green-200 hover:text-green-400 mx-2"><i class="fab fa-github text-2xl"></i></a>
+            </div>
+            <p class="text-green-200">&copy; 2025 GMvault. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+<div class="content">
+    <img src="./Media/img 4.jpg">
+    <h3>Wheat</h3>
+    <p>Name: HB4 Wheat
+        Code: IND-ØØ412-7</p>
+    <h6></h6>
+    
+    <button class="buy-4">Book Now</button>
+    </div>
